@@ -1,0 +1,6 @@
+Los datos guardados en el archivo (memoria no-volátil) son:
+0
+0
+0
+10
+0

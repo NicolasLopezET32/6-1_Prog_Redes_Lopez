@@ -1,0 +1,1 @@
+0 / n/a = ArrayIndexOutOfBoundsException: No hay siguiente número para dividir.
