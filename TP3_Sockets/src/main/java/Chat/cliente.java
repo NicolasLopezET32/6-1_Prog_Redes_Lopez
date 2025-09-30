@@ -117,7 +117,7 @@ public class cliente extends connection {
                     seguir = false;
 
             }
-
+        }
         } catch (IOException ex) {
             Logger.getLogger(cliente.class.getName()).log(Level.SEVERE, null, ex);
             ps.println(Colors.ANSI_RED + "Error de conexión/transmisión: " + ex.getMessage() + Colors.ANSI_RESET);
