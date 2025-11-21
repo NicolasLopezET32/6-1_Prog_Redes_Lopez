@@ -1,33 +1,30 @@
 package Ejercicio;
 
-
 public class Celda {
-    private String estado; // "VACIA", "X", "O"
 
-    public Celda() {
-        this.estado = "VACIA";
+    private String estado = "VACIA";
+
+    public void vaciar() {
+        estado = "VACIA";
     }
 
-    public synchronized void vaciar() {
-        this.estado = "VACIA";
+    public boolean esVacia() {
+        return "VACIA".equals(estado);
     }
 
-    public synchronized boolean esVacia() {
-        return "VACIA".equals(this.estado);
-    }
-
-    public synchronized boolean marcar(String simbolo) {
-        if (!esVacia()) return false;
+    public boolean marcar(String simbolo) {
         if (!"X".equals(simbolo) && !"O".equals(simbolo)) return false;
-        this.estado = simbolo;
+
+        if (!esVacia()) return false;
+
+        estado = simbolo;
         return true;
     }
 
-    public synchronized String getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    @Override
     public String toString() {
         return esVacia() ? " " : estado;
     }

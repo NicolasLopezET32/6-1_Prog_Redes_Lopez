@@ -42,8 +42,8 @@ public class Servidor {
              PrintWriter out2 = new PrintWriter(socket2.getOutputStream(), true)) {
 
 
-            out1.println("WELCOME|TURNO|X");
-            out2.println("WELCOME|TURNO|O");
+            out1.println("Bienvenido Jugador X");
+            out2.println("Bienvenido Jugador O");
 
             String nombre1 = in1.readLine();
             String nombre2 = in2.readLine();
@@ -51,8 +51,8 @@ public class Servidor {
             Jugador j2 = new Jugador(nombre2 == null ? "Jugador2" : nombre2, "O");
             Partida partida = new Partida(j1, j2);
 
-            out1.println("START|ERES|X");
-            out2.println("START|ERES|O");
+            out1.println("Empieza - Eres X");
+            out2.println("Empieza - O");
 
             out1.println("ESTADO|" + partida.estadoActual());
             out2.println("ESTADO|" + partida.estadoActual());
